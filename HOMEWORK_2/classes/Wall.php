@@ -40,5 +40,14 @@ class Wall {
         return $this->height;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getMaterial()
+    {
+        return $this->material;
+    }
+
+
 
 } 

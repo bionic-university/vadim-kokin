@@ -37,4 +37,13 @@ class Roof {
         $this->material = $material;
     }
 
+    /**
+     * @return string
+     */
+    public function getMaterial()
+    {
+        return $this->material;
+    }
+
+
 } 

@@ -30,6 +30,8 @@ $wall = new Wall('wood', 15, 10);
 $window = new Window('plastic');
 $level = new Level(5, $wall, $window);
 $house = new House($level, 5, $roof);
-$house->calcRoofConner();
+
+echo 'Our building is ' . $house->calcTotalHeight() . 'm height. The conner of the roof is ' .
+$house->calcRoofConner() . ' deg. Our house is build from ' . $house->selectMaterial() . '.';
 
 
