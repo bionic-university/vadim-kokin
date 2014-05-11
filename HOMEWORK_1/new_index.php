@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class CharCounter
+ */
 class CharCounter{
     public function __construct($data){
         //$data = getParams(func_get_args());

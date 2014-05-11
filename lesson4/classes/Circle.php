@@ -6,7 +6,7 @@
  * Time: 6:35 PM
  */
 
-class Circle {
+class Circle extends AbstractCircle{
     /**
      * @var string
      */
@@ -39,6 +39,10 @@ class Circle {
     {
         return $this->radius;
     }
+    public function rotate(){
+
+    }
+
 
 
 
