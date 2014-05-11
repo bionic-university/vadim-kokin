@@ -4,4 +4,4 @@ vadim-kokin
 
 /HOMEWORK2 - classes that describe House (Try OOP) (https://github.com/bionic-university/vadim-kokin/tree/master/HOMEWORK_2)
 
-/HOMEWORK3 - karaoke singer class
+/HOMEWORK3 - karaoke singer class (https://github.com/bionic-university/vadim-kokin/tree/master/HOMEWORK_3)
