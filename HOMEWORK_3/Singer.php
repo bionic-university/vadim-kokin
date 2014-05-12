@@ -35,6 +35,7 @@ class Singer
         $GroupName = str_replace(' ', '', $GroupName);
         if ($this->CheckGroup($GroupName) === false) {
             echo 'There is no such group in ' . $this->getName() . '\'s repertoire' . PHP_EOL;
+            echo 'Try one of this:' . print_r($this->GetDirList(), true) . PHP_EOL;
         } else {
 
             spl_autoload_register(function ($GroupName) {
@@ -60,23 +61,32 @@ class Singer
      * @param String $GroupName
      * @return bool
      */
-    public function CheckGroup($GroupName)
+    private function CheckGroup($GroupName)
     {
         $result = false;
 
-        $availebleGruops = [];
+        $availebleGruops = $this->GetDirList();
+        $GroupName = str_replace(' ', '', $GroupName);
+        $result = in_array($GroupName, $availebleGruops);
+        return $result;
+    }
+
+    /**
+     * @return array
+     */
+    private function GetDirList()
+    {
+        $filenames = [];
         if ($handle = opendir('Groups/')) {
 
             while (false !== ($file = readdir($handle))) {
-                if ($file != "." && $file != "..") {
-                    array_push($availebleGruops, str_replace('.php', '', $file));
+                if ($file != "." && $file != ".." && $file != 'GroupsTrait.php') {
+                    array_push($filenames, str_replace('.php', '', $file));
 
                 }
             }
         }
-        $GroupName = str_replace(' ', '', $GroupName);
-        $result = in_array($GroupName, $availebleGruops);
-        return $result;
+        return $filenames;
     }
 
 
