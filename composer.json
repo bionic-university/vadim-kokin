@@ -1,0 +1,12 @@
+{
+    "name": "kvvn/bionic2",
+    "authors": [
+        {
+            "name": "kvvn",
+            "email": "kvvn@i.kiev.ua"
+        }
+    ],
+    "require": {
+            "phpunit/phpunit" : "*"
+    }
+}
