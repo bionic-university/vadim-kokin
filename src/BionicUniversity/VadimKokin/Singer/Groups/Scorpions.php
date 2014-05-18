@@ -5,10 +5,9 @@
  * Date: 5/11/14
  * Time: 1:28 PM
  */
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
-include "$root/Genres/Rock.php";
-include "$root/Abstracts/IGroup.php";
+include __DIR__."//../Genres/Rock.php";
+include __DIR__."//../Abstracts/IGroup.php";
 
 
 class Scorpions extends Rock implements IGroup

@@ -6,10 +6,8 @@
  * Date: 5/11/14
  * Time: 1:34 PM
  */
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-
-include "$root/Genres/Metal.php";
-include "$root/Abstracts/IGroup.php";
+include __DIR__."//../Genres/Metal.php";
+include __DIR__."//../Abstracts/IGroup.php";
 include 'GroupsTrait.php';
 
 class Helloween extends Metal implements IGroup

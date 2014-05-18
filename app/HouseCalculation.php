@@ -6,11 +6,11 @@
  * Time: 12:38 PM
  */
 
-include 'classes/Roof.php';
-include 'classes/Wall.php';
-include 'classes/Window.php';
-include 'classes/Level.php';
-include 'classes/House.php';
+include __DIR__.'/../src/BionicUniversity/VadimKokin/House/House.php';
+include __DIR__.'/../src/BionicUniversity/VadimKokin/House/Wall.php';
+include __DIR__.'/../src/BionicUniversity/VadimKokin/House/Window.php';
+include __DIR__.'/../src/BionicUniversity/VadimKokin/House/Level.php';
+include __DIR__.'/../src/BionicUniversity/VadimKokin/House/Roof.php';
 
 
 echo 'this part is OK';

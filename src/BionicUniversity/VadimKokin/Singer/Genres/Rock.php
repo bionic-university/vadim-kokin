@@ -7,9 +7,8 @@
  * Time: 11:03 AM
  */
 
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-echo $root;
-include "$root/Abstracts/AbstractGenre.php";
+
+include __DIR__."//../Abstracts/AbstractGenre.php";
 
 class Rock extends AbstractGenre
 {

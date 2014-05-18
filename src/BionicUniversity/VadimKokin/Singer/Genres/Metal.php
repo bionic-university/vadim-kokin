@@ -6,8 +6,7 @@
  * Date: 5/11/14
  * Time: 11:05 AM
  */
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include "$root/Abstracts/AbstractGenre.php";
+include __DIR__."//../Abstracts/AbstractGenre.php";
 
 class Metal extends AbstractGenre
 {

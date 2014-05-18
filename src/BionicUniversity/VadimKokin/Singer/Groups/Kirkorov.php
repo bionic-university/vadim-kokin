@@ -7,8 +7,8 @@
  */
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
-include "$root/Genres/Pop.php";
-include "$root/Abstracts/IGroup.php";
+include __DIR__."//../Genres/Pop.php";
+include __DIR__."//../Abstracts/IGroup.php";
 include 'GroupsTrait.php';
 
 class Kirkorov extends Pop implements IGroup

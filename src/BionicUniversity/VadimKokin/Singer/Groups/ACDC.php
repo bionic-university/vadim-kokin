@@ -6,10 +6,10 @@
  * Time: 1:04 PM
  */
 
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-echo $root;
-include "$root/Genres/Rock.php";
-include "$root/Abstracts/IGroup.php";
+//$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+//echo $root;
+include __DIR__."//../Genres/Rock.php";
+include __DIR__."//../Abstracts/IGroup.php";
 include 'GroupsTrait.php';
 
 class ACDC extends Rock implements IGroup
