@@ -12,7 +12,16 @@ require_once __DIR__ . '/../src/BionicUniversity/VadimKokin/Singer/Singer.php';
 class SingerTest extends PHPUnit_Framework_TestCase
 {
 
-    public function testCheckGroup()
+    public function groupProvider(){
+        return array(
+            array(array('ACDC')),
+            array(array('Metalica')),
+            array(array('Kirkorov')),
+        );
+    }
+
+
+    public function testFavoritGenre()
     {
         $singer = new Singer('Ivan', 'Rock');
         $this->assertEquals('Rock', $singer->getFavoritGenre());
@@ -24,4 +33,16 @@ class SingerTest extends PHPUnit_Framework_TestCase
         $method->setAccessible(true);
         $this->assertNotNull($method->invoke($singer));
     }
+    /**
+     * @dataProvider groupProvider
+     */
+    public function testCheckGroup($groups){
+        $singer = new Singer('Tolya', 'Pop');
+        $method = new ReflectionMethod($singer, 'CheckGroup');
+        $method->setAccessible(true);
+        $args = ['ACDC'];
+        $this->assertTrue($method->invokeArgs($singer, $groups));
+    }
+
+
 } 
